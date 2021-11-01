@@ -28,12 +28,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* matrix size */
-#define MATRIX_ROWS 17  // keycode bit: 7-3
-#define MATRIX_COLS 8   // keycode bit: 2-0
+#define MATRIX_ROWS 32
+#define MATRIX_COLS 8
 
 
 /* legacy keymap support */
-#define USE_LEGACY_KEYMAP
+//#define USE_LEGACY_KEYMAP
 
 
 /* key combination for command */
@@ -127,12 +127,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PS2_CLOCK_PORT  PORTD
 #define PS2_CLOCK_PIN   PIND
 #define PS2_CLOCK_DDR   DDRD
-#define PS2_CLOCK_BIT   1
+#define PS2_CLOCK_BIT   3
 
 #define PS2_DATA_PORT   PORTD
 #define PS2_DATA_PIN    PIND
 #define PS2_DATA_DDR    DDRD
-#define PS2_DATA_BIT    0
+#define PS2_DATA_BIT    2
 #endif
 
 #endif

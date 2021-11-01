@@ -74,12 +74,14 @@ COMMAND_ENABLE = yes    # Commands for debug and configuration
 # PS/2 protocol implementations
 #
 #PS2_USE_USART = yes	# uses hardware USART engine for PS/2 signal receive
-PS2_USE_INT = yes	# uses external interrupt for falling edge of PS/2 clock pin
-#PS2_USE_BUSYWAIT = yes	# uses primitive reference code
+#PS2_USE_INT = yes	# uses external interrupt for falling edge of PS/2 clock pin
+PS2_USE_BUSYWAIT = yes	# uses primitive reference code
 
 
 #---------------- Programming Options --------------------------
-PROGRAM_CMD = teensy_loader_cli -mmcu=$(MCU) -w -v $(TARGET).hex
+#PROGRAM_CMD = teensy_loader_cli -mmcu=$(MCU) -w -v $(TARGET).hex
+PROGRAM_CMD = avrdude -vvvvvvvvvvvvvvvvvvvv -p $(MCU) -c usbasp -U flash:w:$(TARGET).hex
+
 
 
 # Search Path
